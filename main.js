@@ -1,10 +1,8 @@
-// dépendance api express
-var express = require('express');
+const express = require("express");
+const bodyParser = require("body-parser");
+const router = express.Router();
+const app = express();
 
-// serveur html
-var server = express();
-server.listen(800);
-
-server.get('/page.html', function (request, response) {
-    // exécuté lorsqu'est appelé page.html
-});
+app.listen(3000, () => {
+    console.log("Started on PORT 3000");
+})

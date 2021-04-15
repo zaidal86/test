@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/zaidal86/test/issues"
   },
-  "homepage": "https://github.com/zaidal86/test#readme"
+  "homepage": "https://github.com/zaidal86/test#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }

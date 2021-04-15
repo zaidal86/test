@@ -1,22 +1,10 @@
 const express = require("express");
-const bodyParser = require("body-parser");
-const router = express.Router();
 const app = express();
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
-
-router.get('/', (req, res) => {
-    res.sendfile("index.html");
+// respond with "hello world" when a GET request is made to the homepage
+app.get('/', function (req, res) {
+    res.send('hello world');
 });
-
-router.post('/login', (req, res) => {
-    var user_name = req.body.user;
-    var password = req.body.password;
-    console.log("User name = " + user_name + ", password is " + password);
-    res.end("yes");
-});
-
 app.listen(3000, () => {
     console.log("Started on PORT 3000");
 })
